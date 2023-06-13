@@ -2,13 +2,13 @@ version: "3.7"
 
 services:
   rstudio:
-    image: rocker_sp_temp_gpu:latest
+    image: rocker_sptime_gpu:latest
     build :
       context: .
       dockerfile: ./dockerfile/rstudio.dockerfile
     volumes: 
       - $pwd:/home/rstudio/
-    container_name: rocker_sp_temp_gpu
+    container_name: rocker_sptime_gpu
     environment:
       - USERNAME=rstudio
       - PASSWORD=rstudio777
